@@ -60,14 +60,18 @@ find_package(Boost COMPONENTS
              unit_test_framework
              REQUIRED)
 
-find_package(Eigen3 REQUIRED)
+set(EIGEN3_INCLUDE_DIRS /homes/grail/xuanluo/repos/eigen3)
+find_package(Eigen3 3.3.3 REQUIRED)
 
-find_package(FreeImage REQUIRED)
+set(FREEIMAGE_INCLUDE_DIRS /homes/grail/xuanluo/repos/FreeImage/Source)
+set(FREEIMAGE_LIBRARIES /homes/grail/xuanluo/repos/FreeImage/libfreeimage-3.17.0.so)
+find_package(FreeImage 3.17.0 REQUIRED)
 
 find_package(Glog REQUIRED)
 
 find_package(Ceres REQUIRED)
 
+link_libraries(/usr/lib64/libX11.so /usr/lib64/libGL.so)
 find_package(OpenGL REQUIRED)
 find_package(GLUT REQUIRED)
 find_package(Glew REQUIRED)
